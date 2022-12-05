@@ -1,4 +1,4 @@
-package pattern12.top_k_elements;
+package top_k_elements;
 
 import java.util.PriorityQueue;
 

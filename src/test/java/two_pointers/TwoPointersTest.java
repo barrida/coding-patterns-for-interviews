@@ -1,4 +1,4 @@
-package pattern4.two_pointers;
+package two_pointers;
 
 import org.junit.jupiter.api.Test;
 

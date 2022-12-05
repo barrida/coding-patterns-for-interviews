@@ -1,4 +1,4 @@
-package pattern4.two_pointers;
+package two_pointers;
 
 import java.util.Arrays;
 
