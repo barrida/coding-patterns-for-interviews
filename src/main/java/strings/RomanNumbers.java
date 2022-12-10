@@ -23,8 +23,4 @@ public class RomanNumbers {
 		return romanNumber;
 	}
 
-	public static String createRomanNumeralMap(int n) {
-
-		return null;
-	}
 }
