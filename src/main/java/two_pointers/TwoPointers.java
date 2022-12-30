@@ -1,6 +1,9 @@
 package two_pointers;
 
 import java.util.Arrays;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Set;
 
 /**
  * @author suleyman.yildirim
@@ -101,5 +104,48 @@ public class TwoPointers {
 				left++;
 		}
 		return new int[] { -1, -1 };
+	}
+
+	/**
+	 * Given an array, we find a pair ‘Y’ and ‘Z’ such that X + Y + Z == 0.
+	 * At this stage, our problem translates into finding a pair whose sum is equal to “−X”.
+	 *
+	 * @param arr       sorted array
+	 * @param targetSum "-X"
+	 * @param triplets  triplets that satisfy X + Y + Z = 0
+	 * @param left      left pointer
+	 */
+	public static void pairWithTargetSumWithTriplets(int[] arr, int targetSum, Set<List<Integer>> triplets, int left) {
+		int right = arr.length - 1;
+		while (left < right) {
+			int currentSum = arr[left] + arr[right];
+			// we found the pair
+			if (currentSum == targetSum) {
+				triplets.add(Arrays.asList(-targetSum, arr[left], arr[right]));
+			}
+			if (currentSum > targetSum)
+				right--;
+			else
+				left++;
+		}
+	}
+
+	/**
+	 * Given an array of unsorted numbers, find all unique triplets in it that add up to zero.
+	 * <p>
+	 * After we sort the array, the problem can be translated into the slight modification of "Pair with Target Sum" problem.
+	 *
+	 * @param arr [-3, 0, 1, 2, -1, 1, -2]
+	 * @return [[-3, 1, 2], [-2, 0, 2], [-2, 1, 1], [-1, 0, 1]]
+	 */
+	public static Set<List<Integer>> findTriplets(int[] arr) {
+		Arrays.sort(arr);
+		Set<List<Integer>> triplets = new LinkedHashSet<>();
+		for (int i = 0; i < arr.length - 2; i++) {
+			if (arr[i + 1] == arr[i])
+				continue;
+			pairWithTargetSumWithTriplets(arr, -arr[i], triplets, i + 1);
+		}
+		return triplets;
 	}
 }

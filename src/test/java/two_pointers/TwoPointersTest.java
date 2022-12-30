@@ -1,5 +1,9 @@
 package two_pointers;
 
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Set;
+
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
@@ -31,4 +35,22 @@ class TwoPointersTest {
 		assertArrayEquals(new int[] { 0, 2 }, result);
 	}
 
+	@Test
+	void pairWithTargetSumWithTriplets(){
+		int[] arr = new int[]{-3, -2, -1, 0, 1, 1, 2};
+		Set<List<Integer>> triplets = new LinkedHashSet<>();
+		for (int i = 0; i < arr.length - 2; i++) {
+			TwoPointers.pairWithTargetSumWithTriplets(arr, -arr[i], triplets, i + 1);
+		}
+		assertEquals(Set.of(List.of(-3, 1, 2), List.of(-2, 0, 2), List.of(-2, 1, 1), List.of(-1, 0, 1)), triplets);
+	}
+
+	@Test
+	void findTriplets(){
+		Set<List<Integer>> triplets = Set.of(List.of(-3, 1, 2), List.of(-2, 0, 2), List.of(-2, 1, 1), List.of(-1, 0, 1));
+		assertEquals(triplets, TwoPointers.findTriplets(new int[]{-3, 0, 1, 2, -1, 1, -2}));
+
+		Set<List<Integer>> triplets2 = Set.of(List.of(-5, 2, 3), List.of(-2, -1, 3));
+		assertEquals(triplets2, TwoPointers.findTriplets(new int[]{-5, 2, -1, -2, 3}));
+	}
 }
