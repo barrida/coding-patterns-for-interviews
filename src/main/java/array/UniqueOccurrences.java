@@ -1,5 +1,6 @@
 package array;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -18,9 +19,7 @@ public class UniqueOccurrences {
 	 */
 	public static boolean uniqueOccurrences(int[] arr) {
 		Map<Integer, Integer> frequency = new HashMap<>();
-		for (int number : arr) {
-			frequency.put(number, frequency.getOrDefault(number, 0) + 1);
-		}
+		Arrays.stream(arr).forEach(number -> frequency.put(number, frequency.getOrDefault(number, 0) + 1));
 		Set<Integer> uniqueValues = new HashSet<>(frequency.values());
 		return uniqueValues.size() == frequency.size();
 	}
