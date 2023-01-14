@@ -6,13 +6,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * You are given a string s and an integer k, a k duplicate removal consists of choosing k adjacent and
+ * equal letters from s and removing them causing the left and the right side of the deleted substring to concatenate together.
+ *
  * @author suleyman.yildirim
  */
 public class RemoveAllAdjacentDuplicates {
 
 	/**
-	 * You are given a string s and an integer k, a k duplicate removal consists of choosing k adjacent and equal letters from s and removing them, causing the left and the right side of the deleted substring to concatenate together.
-	 * <p>
+	 *
 	 * This is a recursive solution, which is not efficient for very long strings
 	 *
 	 * @param s "deeedbbcccbdaa"
@@ -38,10 +40,11 @@ public class RemoveAllAdjacentDuplicates {
 	}
 
 	/**
+	 * Stach approach, partially working.
 	 *
-	 * @param s
-	 * @param k
-	 * @return
+	 * @param s "deeedbbcccbdaa"
+	 * @param k 3
+	 * @return "aa"
 	 */
 	public static String removeDuplicatesStackApproach1(String s, int k) {
 		Deque<Character> stack = new ArrayDeque<>();
@@ -70,6 +73,13 @@ public class RemoveAllAdjacentDuplicates {
 		return str.toString();
 	}
 
+	/**
+	 * Full working solution using stack and hashmap.
+	 *
+	 * @param s "deeedbbcccbdaa"
+	 * @param k 3
+	 * @return "aa"
+	 */
 	public static String removeDuplicatesStackApproach2(String s, int k) {
 		Deque<Map<Character, Integer>> stack = new ArrayDeque<>();
 		for (char ch : s.toCharArray()) {
