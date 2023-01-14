@@ -86,9 +86,9 @@ public class TwoPointers {
 	 * Output: [1, 3]
 	 * Explanation: The numbers at index 1 and 3 add up to 6: 2+4=6
 	 *
-	 * @param arr input array
-	 * @param targetSum target
-	 * @return
+	 * @param arr input array [1, 2, 3, 4, 6]
+	 * @param targetSum target 6
+	 * @return [1, 3]
 	 */
 	public static int[] pairWithTargetSum(int[] arr, int targetSum) {
 		int left = 0;
