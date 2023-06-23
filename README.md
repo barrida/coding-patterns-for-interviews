@@ -7,12 +7,12 @@ Documentation:
 [Coding Patterns.docx](https://github.com/barrida/Grokking-Coding-Patterns/files/11850200/Coding.Patterns.docx)
 
 # Contents
-[Sliding Window](#sliding-window)  	
-[Islands Matrix Traversal](#Islands-Matrix-Traversal)  
+[Sliding Window](#sliding-window)  
+[Islands Matrix Traversal](#islands-matrix-traversal)  
 [Two Pointers](#two-pointers)  
-[Top 'K' Elements](#top--k-elements)  	
+[Top K Elements](#top-k-elements)  
 [Subsets](#subsets)  
-[Modified Binary Search](#modified-binary-search)  	
+[Modified Binary Search](#modified-binary-search)  
 [BitWise XOR](#bitwise-xor)  
 
 ## Sliding Window  
