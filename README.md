@@ -14,6 +14,7 @@ Documentation:
 [Subsets](#subsets)  
 [Modified Binary Search](#modified-binary-search)  
 [BitWise XOR](#bitwise-xor)  
+[Tips](#tips)  
 
 ## Sliding Window  
 In many coding problems where we are dealing with an array (or a LinkedList), we are asked to find or calculate something among all the subarrays of a given size.  
