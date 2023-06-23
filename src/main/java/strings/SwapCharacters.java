@@ -5,6 +5,8 @@ package strings;
  */
 public class SwapCharacters {
 	public String swap(String s) {
+		if(s.isEmpty())
+			return s;
 		char[] chars = s.toCharArray();
 		chars[chars.length - 1] = s.charAt(0);
 		chars[0] = s.charAt(s.length() - 1);

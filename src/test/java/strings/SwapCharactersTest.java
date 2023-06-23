@@ -8,6 +8,7 @@ class SwapCharactersTest {
 
 	@Test void swap() {
 		assertEquals("ooensic", new SwapCharacters().swap("coensio"));
+		assertEquals("", new SwapCharacters().swap(""));
 	}
 
 	@Test void swapUsingString() {
