@@ -136,3 +136,6 @@ for (int i = 0; i < s.length(); i++) {
     char current = s.charAt(i);
     charFrequency.put(current, charFrequency.getOrDefault(current, 0) + 1);
 }
+```
+
+Arrays.stream(arr).forEach(number -> frequency.put(number, frequency.getOrDefault(number, 0) + 1));

@@ -29,14 +29,14 @@ public class MaxSumSubArrayOfSizeK {
 	public static int maxSumSubArraySlidingWindow(int[] arr, int k) {
 		int subArrSum = 0;
 		int maxSum = 0;
-		int subArrStartIndex = 0;
-		for (int subArrEndIndex = 0; subArrEndIndex < arr.length; subArrEndIndex++) {
-			subArrSum += arr[subArrEndIndex];
+		int windowStart = 0;
+		for (int windowEnd = 0; windowEnd < arr.length; windowEnd++) {
+			subArrSum += arr[windowEnd];
 			//sliding window size
-			if (subArrEndIndex >= k - 1) {
+			if (windowEnd >= k - 1) {
 				maxSum = Math.max(subArrSum, maxSum);
-				subArrSum -= arr[subArrStartIndex];
-				subArrStartIndex++;
+				subArrSum -= arr[windowStart];
+				windowStart++;
 			}
 		}
 		return maxSum;

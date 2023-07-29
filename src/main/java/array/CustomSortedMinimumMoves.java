@@ -9,7 +9,7 @@ public class CustomSortedMinimumMoves {
 
 	public static int move(int[] arr) {
 		int moves = 0;
-		for (int i = 0; i < arr.length / 2; i++) {
+		for (int i = 0; i <= arr.length / 2 ; i++) {
 			if (arr[i] % 2 != 0) {
 				for (int j = arr.length / 2; j < arr.length; j++) {
 					if (arr[j] % 2 == 0) {
