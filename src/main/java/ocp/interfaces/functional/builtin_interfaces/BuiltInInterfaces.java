@@ -1,4 +1,4 @@
-package ocp.ooa.interfaces.functional.builtin_interfaces;
+package ocp.interfaces.functional.builtin_interfaces;
 
 import java.util.function.BiFunction;
 import java.util.function.BiPredicate;

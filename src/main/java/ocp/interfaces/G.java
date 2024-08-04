@@ -1,6 +1,4 @@
-package ocp.ooa.interfaces;
-
-import java.util.function.Supplier;
+package ocp.interfaces;
 
 /**
  * @author suleyman.yildirim

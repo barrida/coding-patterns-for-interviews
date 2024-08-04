@@ -1,4 +1,4 @@
-package ocp.ooa.interfaces.functional;
+package ocp.interfaces.functional;
 
 /**
  * @author suleyman.yildirim
