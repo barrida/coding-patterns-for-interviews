@@ -21,7 +21,7 @@ In many coding problems where we are dealing with an array (or a LinkedList), we
 - Maximum Sum Subarray of Size K (easy)
 - Smallest Subarray with a Greater Sum (easy)
 - Longest Substring with K Distinct Characters (medium)
-
+- Given a binary array data, return the minimum number of swaps required to group all 1’s present in the array together in any place in the array.
 - Given an array of positive numbers and a positive number ‘k,’ find the maximum sum of any contiguous subarray of size ‘k’.
 
 ![img.png](img.png)
