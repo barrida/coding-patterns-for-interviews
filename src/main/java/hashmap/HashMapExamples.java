@@ -1,11 +1,13 @@
 package hashmap;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
+import java.util.stream.Collectors;
 
 /**
  * @author suleyman.yildirim
@@ -47,5 +49,35 @@ public class HashMapExamples {
 				.findFirst()
 				.map(Map.Entry::getKey)
 				.orElse(null);
+	}
+
+	public static String orderWeight(String s) {
+		Map<String, Integer> map = new HashMap<String, Integer>();
+
+		String[] splittedString = s.split(" ");
+
+		for(String number : splittedString) {
+			int weight = calculateWeight(Integer.valueOf(number));
+			map.put(number, weight);
+		}
+
+		// Sort the entries first by weight, then lexicographically by the key (number)
+
+		// If the weights are the same, compare lexicographically by the number (key)
+		var sortedList =  map.entrySet().stream()
+				.sorted(Comparator.comparingInt((Map.Entry<String, Integer> e) -> e.getValue()).thenComparing(Map.Entry::getKey))
+				.map(Map.Entry::getKey)  // Extract the original number (key)
+				.toList();
+
+		return String.join(" ", sortedList);
+	}
+
+	private static int calculateWeight(Integer value){
+		int weight = 0;
+		while(value != 0) {
+			weight += value % 10;
+			value = value / 10;
+		}
+		return weight;
 	}
 }

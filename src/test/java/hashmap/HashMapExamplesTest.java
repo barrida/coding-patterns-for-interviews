@@ -36,6 +36,15 @@ class HashMapExamplesTest {
 		assertEquals(expected, actual);
 	}
 
+	@Test
+	public void shouldHandleTheExample() {
+
+		// "56 65 74 100 99 68 86 180 90"
+		// 11 11  11  1  18 14  14 9
+		assertEquals("100 180 90 56 65 74 68 86 99", HashMapExamples.orderWeight("56 65 74 100 99 68 86 180 90"));
+
+}
+
 	@Test void testSortEntrySetByKey() {
 		// Arrange
 		List<Map.Entry<Integer, Integer>> expected = new ArrayList<>();
