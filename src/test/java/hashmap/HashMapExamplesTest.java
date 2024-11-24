@@ -22,6 +22,10 @@ class HashMapExamplesTest {
 		assertEquals(Map.of(1,3,2,2,3,1), HashMapExamples.countFrequency(new int[] { 1, 2, 2, 1, 1, 3 }));
 	}
 
+	@Test void testCountFrequencyWithCollectorsGroupBy(){
+		assertEquals(Map.of(1,3,2,2,3,1), HashMapExamples.countFrequencyWithCollectorsGroupBy(new int[] { 1, 2, 2, 1, 1, 3 }));
+	}
+
 	@Test void testSortEntrySetByValue() {
 		// Arrange
 		List<Map.Entry<Integer, Integer>> expected = new ArrayList<>();

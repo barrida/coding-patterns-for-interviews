@@ -8,16 +8,32 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 /**
  * @author suleyman.yildirim
  */
 public class HashMapExamples {
 
+	private HashMapExamples(){
+
+	}
+
 	public static Map<Integer, Integer> countFrequency(int[] arr) {
 		var map = new HashMap<Integer, Integer>();
 		Arrays.stream(arr).forEach(x -> map.put(x, map.getOrDefault(x, 0) + 1));
 		return map;
+	}
+
+	public static Map<Integer, Integer> countFrequencyWithCollectorsGroupBy(int[] arr) {
+		// Use IntStream to work with individual elements of the array
+		return IntStream.of(arr)
+				.boxed() // Convert int to Integer to work with Streams API
+				.collect(Collectors.groupingBy(
+					n -> n, // Group by the number itself
+					Collectors.summingInt(e -> 1) // Count occurrences
+		));
+
 	}
 
 	public static List<Map.Entry<Integer, Integer>> sortEntrySetByValue(Map<Integer, Integer> map) {
