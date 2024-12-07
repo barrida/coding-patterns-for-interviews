@@ -26,8 +26,7 @@ In many coding problems where we are dealing with an array (or a LinkedList), we
 
 ![img.png](img.png)
 
-![img_1.png](img_1.png)
-
+![image](https://github.com/user-attachments/assets/c6eeaa2a-840e-428b-9b23-4acfa3184625)  
 
 ## Islands Matrix Traversal
 
