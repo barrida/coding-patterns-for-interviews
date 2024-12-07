@@ -1,0 +1,6 @@
+Order ID,Customer Name,Order Amount,Order Date
+101,Alice,200,2024-11-28
+102,Bob,150,2024-11-27
+103,Charlie,300,2024-11-26
+101,Alice,200,2024-11-28
+104,Eve,250, null
