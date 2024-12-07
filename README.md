@@ -8,11 +8,11 @@ Documentation:
 
 # Contents
 [Sliding Window](#sliding-window)  
-[Islands Matrix Traversal](#islands-matrix-traversal)  
 [Two Pointers](#two-pointers)  
 [Top K Elements](#top-k-elements)  
 [Subsets](#subsets)  
 [Modified Binary Search](#modified-binary-search)  
+[Islands Matrix Traversal](#islands-matrix-traversal)  
 [BitWise XOR](#bitwise-xor)  
 [Tips](#tips)  
 
@@ -27,38 +27,6 @@ In many coding problems where we are dealing with an array (or a LinkedList), we
 ![img.png](img.png)
 
 ![image](https://github.com/user-attachments/assets/c6eeaa2a-840e-428b-9b23-4acfa3184625)  
-
-## Islands Matrix Traversal
-
-Many coding interview problems involve traversing 2D arrays. The Island pattern describes all the efficient ways to traverse a matrix. This pattern will go through many problems to explain matrix traversal using Depth First Search and Breadth First Search approaches and their variants.
-- Number of Islands (easy) 26:25  
-
-Given a 2D array (i.e., a matrix) containing only 1s (land) and 0s (water), count the number of islands* in it.  
-![img_2.png](img_2.png)
-
-- Biggest Island (easy) 07:59  
-
-Given a 2D array (i.e., a matrix) containing only 1s (land) and 0s (water), find the biggest island in it. Write a function to return the area of the biggest island.
-![img_3.png](img_3.png)
-![img_4.png](img_4.png)
-
-- Flood Fill (easy) 07:39  
-
-Any image can be represented by a 2D integer array (i.e., a matrix) where each cell represents the pixel value of the image. 
-
-Flood fill algorithm takes a starting cell (i.e., a pixel) and a color. The given color is applied to all horizontally and vertically connected cells with the same color as that of the starting cell. Recursively, the algorithm fills cells with the new color until it encounters a cell with a different color than the starting cell.
-
-Given a matrix, a starting cell, and a color, flood fill the matrix.
-
-![img_5.png](img_5.png)
-
-![img_6.png](img_6.png)
-
-![img_7.png](img_7.png)
-
-- Number of Closed Islands (easy) 10:03
-
-*Island:  An island is a connected set of 1s (land) and is surrounded by either an edge or 0s (water). Each cell is considered connected to other cells horizontally or vertically (not diagonally).
 
 ## Two Pointers
 In problems where we deal with sorted arrays (or LinkedLists) and need to find a set of elements that fulfil certain constraints, the Two Pointers approach becomes quite useful. The set of elements could be a pair, a triplet or even a subarray.
@@ -116,6 +84,39 @@ As we know, whenever we are given a sorted Array or LinkedList or Matrix, and we
 - Given an array of numbers sorted in an ascending order, find the ceiling of a given number ‘key’. The ceiling of the ‘key’ will be the smallest element in the given array greater than or equal to the ‘key’.
 - Given an array of lowercase letters sorted in ascending order, find the smallest letter in the given array greater than a given ‘key’.
 - Given an array of numbers sorted in ascending order, find the range of a given number ‘key’. The range of the ‘key’ will be the first and last position of the ‘key’ in the array.
+
+## Islands Matrix Traversal
+
+Many coding interview problems involve traversing 2D arrays. The Island pattern describes all the efficient ways to traverse a matrix. This pattern will go through many problems to explain matrix traversal using Depth First Search and Breadth First Search approaches and their variants.
+- Number of Islands (easy) 26:25  
+
+Given a 2D array (i.e., a matrix) containing only 1s (land) and 0s (water), count the number of islands* in it.  
+![img_2.png](img_2.png)
+
+- Biggest Island (easy) 07:59  
+
+Given a 2D array (i.e., a matrix) containing only 1s (land) and 0s (water), find the biggest island in it. Write a function to return the area of the biggest island.
+![img_3.png](img_3.png)
+![img_4.png](img_4.png)
+
+- Flood Fill (easy) 07:39  
+
+Any image can be represented by a 2D integer array (i.e., a matrix) where each cell represents the pixel value of the image. 
+
+Flood fill algorithm takes a starting cell (i.e., a pixel) and a color. The given color is applied to all horizontally and vertically connected cells with the same color as that of the starting cell. Recursively, the algorithm fills cells with the new color until it encounters a cell with a different color than the starting cell.
+
+Given a matrix, a starting cell, and a color, flood fill the matrix.
+
+![img_5.png](img_5.png)
+
+![img_6.png](img_6.png)
+
+![img_7.png](img_7.png)
+
+- Number of Closed Islands (easy) 10:03
+
+*Island:  An island is a connected set of 1s (land) and is surrounded by either an edge or 0s (water). Each cell is considered connected to other cells horizontally or vertically (not diagonally).
+
 
 ## BitWise XOR
 
